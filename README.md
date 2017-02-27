@@ -4,7 +4,9 @@ Advantage of using mixed distributions to cluster mixed typed data is better seg
 
 ## Main codes
 The main codes are
+
     1) mdmmCpp.R
     2) mdmmCore.cpp
+	
 where mdmmCpp.R is the file that your R script would source from and mdmmCore.cpp is the C++ code that mdmmCpp.R is built on.
 
