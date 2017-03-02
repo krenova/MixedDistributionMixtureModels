@@ -1,6 +1,6 @@
 
-setwd("C:/Users/ekhongl/Desktop/BACKUPS/COMMITTED/MDMM")
-source('mdmmCpp.R')
+source('lib/mdmmCpp.R')
+
 
 #oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 # simulating 3 distinct mix multivariate normal, categorical and 
@@ -83,7 +83,7 @@ points(dat[,idx_num][eval_clusters==3,],col='lightblue')
 
 
 
-source('MDMM_plot_tools.R')
+source('lib/MDMM_plot_tools.R')
 
 # plot gaussian data
 for ( i in 1:2)	{

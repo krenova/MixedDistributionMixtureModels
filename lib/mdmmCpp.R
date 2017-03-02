@@ -1,7 +1,7 @@
 
 library(Rcpp)
 library(RcppArmadillo)
-sourceCpp('mdmmCore.cpp')
+sourceCpp('lib/mdmmCore.cpp')
 
 #oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 # Mixed Finite Mixture Model Function (Via EM Algorithm)

@@ -232,7 +232,7 @@ MDMM_r <- function(dat, K, multinomial_indices = integer(), tol = 0.01, est_cov 
                           loglikelihood = loglik[length(loglik)],
                           loglike_profile = loglik
                           )
-  class(output_summary) <- 'mdmm' 
+  class(output_summary) <- 'mdmm_r' 
   attr(output_summary, "hidden") <-c('clusters',
                                      'cluster_assignment_probability',
                                      'Data_Attributes')
@@ -240,7 +240,7 @@ MDMM_r <- function(dat, K, multinomial_indices = integer(), tol = 0.01, est_cov 
 }
 
 # To prevent printing of all data when MDMM output is called
-print.mdmm <- function (x) {
+print.mdmm_r <- function (x) {
   hid <- attr(x, "hidden")
   print(x[!names(x) %in% hid])
 }
@@ -254,7 +254,7 @@ summary <- function (x, ...) {
   UseMethod("summary", x)
 }
 
-summary.mdmm <- function(x, ...) {
+summary.mdmm_r <- function(x, ...) {
   cat('\n\nGoodness of Fit Statistics:\n')
   print(x$GOF, digits = max(5, getOption("digits") - 3))
   cat('\nCluster Membership Counts:')

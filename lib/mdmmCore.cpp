@@ -27,7 +27,7 @@ NumericMatrix muEM( NumericMatrix& x, NumericMatrix& z,
 					std::vector<double>& sum_zk,
 				    int& nrow, int& ncol, int& K_clust)	{
 	NumericMatrix out( K_clust, ncol);
-	for(int k; k < K_clust; k++)	{
+	for(int k = 0; k < K_clust; k++)	{
 		for(int j = 0; j < ncol; j++)	{
 			for(int i = 0; i < nrow; i++)	{
 				out(k,j) += x(i,j) * z(i,k);
@@ -253,7 +253,7 @@ NumericMatrix loglik( NumericMatrix& lgauss_k, NumericMatrix& lcat_k,
 					  NumericMatrix& lmult_k, NumericVector& Pi,
 					  int& nrow, int& K_clust)	{
 	NumericMatrix out(nrow, K_clust);
-	double lpi[K_clust] = {};
+	double lpi[K_clust];
 	for ( int k = 0; k < K_clust; k++ )	{
 		lpi[k] = std::log(Pi[k]);
 	}
