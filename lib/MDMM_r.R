@@ -1,4 +1,16 @@
 
+#**********************************************************************************
+#**********************************************************************************
+#**********************************************************************************
+# Original pure R prototype of the MDMM algorithm. 
+#	- used to illustrate the difference in speed between the R and Rcpp 
+#	  implementation
+#	- also contains thenon-monotonic likelihood bug which needs to be fixed 
+#**********************************************************************************
+#**********************************************************************************
+#**********************************************************************************
+
+
 library(MASS)
 library(gtools)
 
@@ -28,7 +40,7 @@ lmult <- function( x, p)  {
 #oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 # Mixed Finite Mixture Model Function (Via EM Algorithm)
 #oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-MDMM <- function(dat, K, multinomial_indices = integer(), tol = 0.01, est_cov = TRUE)  {
+MDMM_r <- function(dat, K, multinomial_indices = integer(), tol = 0.01, est_cov = TRUE)  {
   
   #number of data points
   N <- nrow(dat)
@@ -249,9 +261,3 @@ summary.mdmm <- function(x, ...) {
   print(table(x$clusters))
 }
 #oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-
-
-cbind(apply(min_z[-1,]-max_z[-1,],1,min),diff(loglik))
-
-
-exp(loglik_k[3643,]-loglik_k[3643,2]-log(sum(exp(loglik_k[3643,] - loglik_k[3643,2]))))
