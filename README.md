@@ -6,14 +6,14 @@ Advantage of using mixed distributions to cluster mixed typed data is better seg
 ## Codes
 The main codes are:
 
-1) [**mdmmCpp.R**](https://github.com/krenova/MixedDistributionMixtureModels/blob/master/lib/mdmmCpp.R)
-2) [**mdmmCore.cpp**](https://github.com/krenova/MixedDistributionMixtureModels/blob/master/lib/mdmmCore.cpp)
+1. [**mdmmCpp.R**](https://github.com/krenova/MixedDistributionMixtureModels/blob/master/lib/mdmmCpp.R)
+2. [**mdmmCore.cpp**](https://github.com/krenova/MixedDistributionMixtureModels/blob/master/lib/mdmmCore.cpp)
 	
 where mdmmCpp.R is the file that your R script would source from and _**mdmmCore.cpp**_ is the C++ code that _**mdmmCpp.R**_ is built on.
 
 For a demonstration on the use of the clustering function and also compare the speeds for an equivalent code written in R, do refer to the following jupyter notebook:
 
-* demo.ipynb
+* [**demo.ipynb**](https://github.com/krenova/MixedDistributionMixtureModels/blob/master/demo.ipynb)
 
 
 ## Issues
