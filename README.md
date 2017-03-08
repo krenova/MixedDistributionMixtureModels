@@ -16,8 +16,12 @@ For a demonstration on the use of the clustering function and also compare the s
 * [**demo.ipynb**](https://github.com/krenova/MixedDistributionMixtureModels/blob/master/demo.ipynb)
 
 
-## Issues
+## Development
 As would be expected of an EM algorithm, the log-likelihood should be monotonically increasing. However, there are instances where the log-likelihood dips which goes against EM theory. Work is needed to determine if the cause of the dips is due to numerical overflows or bugs.
+
+* https://github.com/krenova/MixedDistributionMixtureModels/issues/1
+
+To note that despite this, through simulations, the algorithm's parameters have always converged to the theoretical. Implying that the bug does not pose any inference issues. Convergence is based on estimated parameter stabilization.
 
 
 
