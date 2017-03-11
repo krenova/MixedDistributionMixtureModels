@@ -21,7 +21,7 @@ As would be expected of an EM algorithm, the log-likelihood should be monotonica
 
 * https://github.com/krenova/MixedDistributionMixtureModels/issues/1
 
-To note that despite this, through simulations, the algorithm's parameters have always converged to the theoretical. Implying that the bug does not pose any inference issues. Convergence is based on estimated parameter stabilization.
+To note that despite this, through simulations, the algorithm's parameters have always converged to the theoretical. Implying that the bug should not pose any inference issues (however, use at your own risk!). Convergence is based on estimated parameter stabilization.
 
 
 
